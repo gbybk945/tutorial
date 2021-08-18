@@ -130,3 +130,4 @@ dmypy.json
 
 # Macの設定ファイル
 .DS_Store
+flaskr/.DS_Store
