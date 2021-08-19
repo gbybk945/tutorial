@@ -1,41 +1,20 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2022.3">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 10.8px Menlo; color: #2f3339; -webkit-text-stroke: #2f3339; background-color: #eaeaea}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 10.8px Menlo; color: #325b8e; -webkit-text-stroke: #325b8e; background-color: #eaeaea}
-    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 10.8px Menlo; color: #2f3339; -webkit-text-stroke: #2f3339; background-color: #eaeaea; min-height: 13.0px}
-    span.s1 {font-kerning: none}
-    span.s2 {font-kerning: none; color: #2f3339; -webkit-text-stroke: 0px #2f3339}
-    span.s3 {font-kerning: none; color: #081a60; -webkit-text-stroke: 0px #081a60}
-    span.s4 {font-kerning: none; color: #535353; -webkit-text-stroke: 0px #535353}
-  </style>
-</head>
-<body>
-<p class="p1"><span class="s1">{% extends "layout.html" %}</span></p>
-<p class="p1"><span class="s1">{% block body %}</span></p>
-<p class="p2"><span class="s2"><span class="Apple-converted-space">  </span>&lt;</span><span class="s3"><b>form</b></span><span class="s2"> </span><span class="s1">action</span><span class="s4">=</span><span class="s1">"{{ url_for('add_entry') }}"</span><span class="s2"> </span><span class="s1">method</span><span class="s4">=</span><span class="s1">post</span><span class="s2"> </span><span class="s1">class</span><span class="s4">=</span><span class="s1">add-entry</span><span class="s2">&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;</span><span class="s3"><b>dl</b></span><span class="s1">&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;</span><span class="s3"><b>dt</b></span><span class="s1">&gt;Title:</span></p>
-<p class="p2"><span class="s2"><span class="Apple-converted-space">      </span>&lt;</span><span class="s3"><b>dd</b></span><span class="s2">&gt;&lt;</span><span class="s3"><b>input</b></span><span class="s2"> </span><span class="s1">type</span><span class="s4">=</span><span class="s1">text</span><span class="s2"> </span><span class="s1">size</span><span class="s4">=</span><span class="s1">20</span><span class="s2"> </span><span class="s1">name</span><span class="s4">=</span><span class="s1">title</span><span class="s2">&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>&lt;</span><span class="s3"><b>dt</b></span><span class="s1">&gt;Text:</span></p>
-<p class="p2"><span class="s2"><span class="Apple-converted-space">      </span>&lt;</span><span class="s3"><b>dd</b></span><span class="s2">&gt;&lt;</span><span class="s3"><b>textarea</b></span><span class="s2"> </span><span class="s1">name</span><span class="s4">=</span><span class="s1">text</span><span class="s2"> </span><span class="s1">rows</span><span class="s4">=</span><span class="s1">5</span><span class="s2"> </span><span class="s1">cols</span><span class="s4">=</span><span class="s1">20</span><span class="s2">&gt;&lt;/</span><span class="s3"><b>textarea</b></span><span class="s2">&gt;</span></p>
-<p class="p2"><span class="s2"><span class="Apple-converted-space">      </span>&lt;</span><span class="s3"><b>dd</b></span><span class="s2">&gt;&lt;</span><span class="s3"><b>input</b></span><span class="s2"> </span><span class="s1">type</span><span class="s4">=</span><span class="s1">submit</span><span class="s2"> </span><span class="s1">value</span><span class="s4">=</span><span class="s1">Share</span><span class="s2">&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/</span><span class="s3"><b>dl</b></span><span class="s1">&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/</span><span class="s3"><b>form</b></span><span class="s1">&gt;</span></p>
-<p class="p3"><span class="s1"></span><br></p>
-<p class="p2"><span class="s2"><span class="Apple-converted-space">  </span>&lt;</span><span class="s3"><b>ul</b></span><span class="s2"> </span><span class="s1">class</span><span class="s4">=</span><span class="s1">entries</span><span class="s2">&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>{% for entry in entries %}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;</span><span class="s3"><b>li</b></span><span class="s1">&gt;&lt;</span><span class="s3"><b>h2</b></span><span class="s1">&gt;{{ entry.title }}&lt;/</span><span class="s3"><b>h2</b></span><span class="s1">&gt;{{ entry.text|safe }}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>{% else %}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;</span><span class="s3"><b>li</b></span><span class="s1">&gt;&lt;</span><span class="s3"><b>em</b></span><span class="s1">&gt;Unbelievable.<span class="Apple-converted-space">  </span>No entries here so far&lt;/</span><span class="s3"><b>em</b></span><span class="s1">&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>{% endfor %}</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/</span><span class="s3"><b>ul</b></span><span class="s1">&gt;</span></p>
-<p class="p1"><span class="s1">{% endblock %}</span></p>
-</body>
-</html>
+{% extends "layout.html" %}
+{% block body %}
+  <form action="{{ url_for('add_entry') }}" method=post class=add-entry>
+    <dl>
+      <dt>Title:
+      <dd><input type=text size=20 name=title>
+      <dt>Text:
+      <dd><textarea name=text rows=5 cols=20></textarea>
+      <dd><input type=submit value=Share>
+    </dl>
+  </form>
+
+  <ul class=entries>
+  {% for entry in entries %}
+    <li><h2>{{ entry.title }}</h2>{{ entry.text|safe }}
+  {% else %}
+    <li><em>Unbelievable.  No entries here so far</em>
+  {% endfor %}
+  </ul>
+{% endblock %} 
