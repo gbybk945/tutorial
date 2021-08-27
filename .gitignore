@@ -131,3 +131,6 @@ dmypy.json
 # Macの設定ファイル
 .DS_Store
 flaskr/.DS_Store
+
+# flaskrアプリ　画像イメージ
+c4fd868b-38c6-453d-b058-37c614a8be2f (1).png
