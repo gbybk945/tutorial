@@ -25,25 +25,12 @@ app.run(host='127.0.0.1', port=5000, debug=True)
 
 ### flaskr/__init__.pyについて
 - ブログアプリを作成するため、データベースを仕様できるようにする初期設定
-```
-from flask import Flask
-from flask.ext.sqlalchemy import SQLAlchemy
 
-app = Flask(__name__)
-app.config.from_object('flaskr.config')
-
-db = SQLAlchemy(app)
-
-import flaskr.views
-```
 
 ### flaskr/config.pyについて
 - SQLiteというデータベースを使い、ファイル名を指定してデータベース管理する。また、セッション情報を暗号化するためのキーの設定。
 ※実際に運用する場合は変更が必要。
-```
-SQLALCHEMY_DATABASE_URI = 'sqlite:///flaskr.db'
-SECRET_KEY = 'secret key'
-```
+
 
 ### flaskr/models.pyについて
 - ブログの記事（データ）を格納するデータベースを作成
@@ -187,7 +174,7 @@ python manage.py
 http://127.0.0.1:5000 をブラウザで開いて動作を確認。
 
 ## 画面レイアウト
-![チュートリアル](c4fd868b-38c6-453d-b058-37c614a8be2f(1).png)
+![チュートリアル](./layout.png)
 
 
 ## その他
