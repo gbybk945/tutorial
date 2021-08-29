@@ -14,7 +14,13 @@ https://study-flask.readthedocs.io/ja/latest/02.html
 ```
 $ pip install -r requirements.txt
 ```
-をターミナルで起動しインストール
+
+
+仮想環境を起動し必要なライブラリをインストールする
+```
+$ source local/bin/activate
+```
+
 
 ### manage.pyについて
 - flaskrというアプリを起動し実行するためのファイル
